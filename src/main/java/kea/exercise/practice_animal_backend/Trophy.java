@@ -16,8 +16,14 @@ public class Trophy {
     @Id
     @GeneratedValue
     private int id;
-    private String name;
     private int year;
+    private int placement;
     @ManyToOne
     private CompetitionCategory category;
+
+    public Trophy(int year, int placement, CompetitionCategory category) {
+        this.year = year;
+        this.placement = placement;
+        this.category = category;
+    }
 }

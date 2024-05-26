@@ -13,12 +13,8 @@ import lombok.Setter;
 @Setter
 public class CompetitionCategory {
     @Id
-    @GeneratedValue
-    private int id;
     private String name;
-    private String description;
-    private int minAge;
-    private int maxAge;
-    private String species;
-    private String breed;
+    public CompetitionCategory(String name) {
+        this.name = name;
+    }
 }
